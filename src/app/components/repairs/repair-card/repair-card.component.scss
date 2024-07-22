@@ -1,0 +1,107 @@
+.repair-card {
+	border: 1px solid var(--orange-text);
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: #2a2a2c;
+	width: 250px;
+	& * {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+legend {
+	font-size: 20px;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	& button {
+		height: fit-content;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		& mat-icon {
+			font-size: 30px;
+			color: rgba(255, 0, 0, 0.538);
+			height: auto;
+			width: auto;
+		}
+	}
+}
+.repair {
+	&-name {
+		background-color: rgba(60, 60, 60, 0.473);
+		padding: 5px 10px;
+		border-radius: 30px;
+		font-size: 16px;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			background-color: red;
+			border-radius: 50%; /* Makes it a circle */
+			margin-right: 7px;
+			margin-bottom: 3px;
+		}
+	}
+	&-full {
+		&::before {
+			background-color: red;
+		}
+	}
+	&-semi {
+		&::before {
+			background-color: rgb(255, 183, 0);
+		}
+	}
+	&-bug {
+		&::before {
+			background-color: rgb(63, 209, 0);
+		}
+	}
+	&-clean {
+		&::before {
+			background-color: rgb(0, 255, 238);
+		}
+	}
+}
+
+img {
+	width: 50px;
+}
+
+.brand {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 210px;
+	font-size: 20px;
+}
+
+.more {
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+	display: flex;
+	align-items: center;
+	column-gap: 4px;
+	font-size: 12px;
+	color: var(--default-bright-text);
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+	background-color: #4141415d;
+	border-radius: 30px;
+	padding: 3px 6px;
+	&:hover {
+		color: var(--orange-text);
+	}
+}
+
+span {
+	color: var(--default-bright-text);
+}

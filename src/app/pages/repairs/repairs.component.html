@@ -1,0 +1,47 @@
+@if (isNewTask()) {
+<app-new-repair (closeAdd)="onCloseAddTask()" />
+}
+
+<main class="repairs">
+	<div class="title">
+		<h1>Repairs:</h1>
+		<div class="buttons">
+			<button (click)="onOpenAddTask()" class="new-item">
+				<span>+</span> New
+			</button>
+			<div class="search">
+				<input
+					(input)="onInputChange(search.value)"
+					placeholder="Search brand"
+					type="text"
+					#search
+				/>
+				<select (change)="onFilter(filter.value)" #filter>
+					<option value="all">All</option>
+					<option value="full-repair">Full repair</option>
+					<option value="semi-repair">Semi repair</option>
+					<option value="small-bug">Small bug</option>
+					<option value="clean">Clean</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	@if (!isLoading()) {
+	<ul class="list">
+		@for (repair of repair(); track repair.repairId) {
+		<app-repair-card
+			(repairDeleted)="handleDelete($event)"
+			[brand]="repair.brand"
+			[repairName]="repair.repairName"
+			[repairId]="repair.repairId"
+		/>
+		} @empty {
+		<div class="no-items">Machines not found</div>
+		}
+	</ul>
+	} @else {
+		<div class="loading">
+			<mat-spinner />
+		</div>
+	}
+</main>
