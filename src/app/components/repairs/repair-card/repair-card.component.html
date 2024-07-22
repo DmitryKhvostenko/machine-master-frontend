@@ -1,0 +1,41 @@
+<fieldset class="repair-card">
+	<legend>
+		<span>№ {{ repairId().toString().slice(-5) }}</span>
+	</legend>
+	<div class="header">
+		<img src="repair.png" alt="machine" />
+		<button class="delete" (click)="handleDelete()">
+			<mat-icon
+				aria-hidden="false"
+				aria-label="Example home icon"
+				fontIcon="delete"
+			></mat-icon>
+		</button>
+	</div>
+	<div class="brand">
+		Brand: <span title="{{ brand() }}">{{ brand() }}</span>
+	</div>
+	<div class="name">
+		Repair:
+		<span
+			[class]="{
+				'repair-name': true,
+				'repair-full': repairName() == 'Full',
+				'repair-semi': repairName() == 'Semi',
+				'repair-bug': repairName() == 'Small bug',
+				'repair-clean': repairName() == 'Clean'
+			}"
+			>{{ repairName() }}</span
+		>
+	</div>
+	<div class="more-wrapper">
+		<a [routerLink]="['/repairs', repairId()]" class="more"
+			>More info
+			<mat-icon
+				aria-hidden="false"
+				aria-label="Example home icon"
+				fontIcon="arrow_right_alt"
+			></mat-icon>
+		</a>
+	</div>
+</fieldset>

@@ -1,0 +1,68 @@
+<div class="page-repair">
+	@if (!isLoading()) {
+	<fieldset>
+		<legend class="title">
+			Machine № {{ repairId().toString().slice(-5) }}
+		</legend>
+		<div class="machine">
+			<div class="machine-wrpapper">
+				<div class="machine-title">Machine info:</div>
+				<div class="machine-info">
+					<div>
+						Country: <span>{{ repairInfo()?.machineId?.country }}</span>
+					</div>
+					<span>|</span>
+					<div>
+						Year: <span>{{ repairInfo()?.machineId?.year }}</span>
+					</div>
+					<span>|</span>
+					<div>
+						Brand: <span>{{ repairInfo()?.machineId?.brand }}</span>
+					</div>
+					<span>|</span>
+					<div class="repairCount">
+						<span>{{ repairInfo()?.machineId?.repairCount }}</span>
+
+						<img src="repair-count.png" alt="repair" />
+					</div>
+				</div>
+			</div>
+			<img class="machine-image" src="machine.png" alt="machine" />
+		</div>
+		<div class="repair">
+			<div class="repair-title">Repair info:</div>
+			<div class="repair-info">
+				<div>
+					Type:
+					<span
+						[class]="{
+							'repair-name': true,
+							'repair-full': repairInfo()?.repairId?.name == 'Full',
+							'repair-semi': repairInfo()?.repairId?.name == 'Semi',
+							'repair-bug': repairInfo()?.repairId?.name == 'Small bug',
+							'repair-clean': repairInfo()?.repairId?.name == 'Clean'
+						}"
+						>{{ repairInfo()?.repairId?.name }}</span
+					>
+				</div>
+				<div>
+					Cost: <span>{{ repairInfo()?.repairId?.cost | currency }}</span>
+				</div>
+				<div>
+					Duration: <span>{{ repairInfo()?.repairId?.duration }} days</span>
+				</div>
+			</div>
+			<div class="repair-date">
+				Start date: <span>{{ repairInfo()?.startDate | date }}</span>
+			</div>
+		</div>
+		@if (repairInfo()?.notes) {
+		<div class="notes">Notes: {{ repairInfo()?.notes }}</div>
+		}
+	</fieldset>
+	} @else {
+		<div class="loading">
+			<mat-spinner />
+		</div>
+	}
+</div>
