@@ -1,0 +1,26 @@
+<main class="machines">
+	<div class="title">
+		<h1>Machines:</h1>
+		<div class="buttons">
+			<div class="search">
+				<input
+					(input)="onInputChange(search.value)"
+					placeholder="Search"
+					type="text"
+					#search
+				/>
+			</div>
+		</div>
+	</div>
+	@if (!isLoading()) {
+	<ul class="list">
+		@for (machine of machines(); track machine._id) {
+		<app-machine-card [machine]="machine" />
+		} @empty {
+		<div class="no-items">Machines not found</div>
+		}
+	</ul>
+	} @else {
+		<div class="loading"><mat-spinner /></div>
+	}
+</main>

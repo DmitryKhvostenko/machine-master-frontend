@@ -1,0 +1,12 @@
+@if ( isLogin() === null) {
+<div class="loading">
+	<mat-spinner class="custom-spinner"></mat-spinner>
+</div>
+} @else if (isLogin() === false) {
+<app-login (userEntered)="onEnter()" />
+} @else {
+<app-header (exit)="onExit()"/>
+<div class="container">
+	<router-outlet />
+</div>
+}

@@ -1,0 +1,22 @@
+.snack-bar {
+	display: flex;
+	align-items: center;
+	column-gap: 50px;
+	color: #ff00009c;
+}
+span {
+  width: 100%;
+  text-align: center;
+	font-size: 16px;
+}
+mat-icon {
+	font-size: 25px;
+  width: 30px;
+}
+
+@media (max-width: 550px) {
+  .snack-bar {
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+}

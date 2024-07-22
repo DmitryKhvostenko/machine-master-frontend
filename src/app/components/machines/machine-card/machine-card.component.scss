@@ -1,0 +1,61 @@
+.machine-card {
+	border: 1px solid var(--orange-text);
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: #2a2a2c;
+	width: 250px;
+	& > *{
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 5px;
+		}
+	}
+	& div {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 210px;
+		font-size: 20px;
+	}
+}
+
+legend {
+	font-size: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	& button {
+		height: fit-content;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	& img {
+		width: 50px !important;
+	}
+}
+
+.brand {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 210px;
+	font-size: 20px;
+}
+
+span {
+	color: var(--default-bright-text);
+}
+
+
+.repair-counter {
+	display: flex;
+	align-items: center;
+  column-gap: 5px;
+	& img {
+		width: 25px;
+		margin-bottom: 0;
+	}
+}

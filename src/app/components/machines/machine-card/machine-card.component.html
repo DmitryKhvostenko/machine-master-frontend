@@ -1,0 +1,19 @@
+<fieldset class="machine-card">
+	<legend><span>№ {{machine()._id.toString().slice(-5)}}</span></legend>
+	<div class="header">
+		<img src="machine.png" alt="machine" />
+	</div>
+	<div>
+		Country: <span>{{ machine().country }}</span>
+	</div>
+	<div>
+		Year: <span>{{ machine().year }}</span>
+	</div>
+	<div>
+		Brand: <span>{{ machine().brand }}</span>
+	</div>
+	<div class="repair-counter">
+		<img src="repair-count.png" alt="repairCounts" />
+		<span>{{ machine().repairCounts }}</span>
+	</div>
+</fieldset>

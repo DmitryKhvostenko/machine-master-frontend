@@ -1,0 +1,14 @@
+<header>
+	<a routerLink="machines" href="" class="logo"> Machine<span>Master</span> </a>
+	<nav class="nav">
+		<a routerLink="/machines" routerLinkActive="selected" class="nav__link"
+			>Machines</a
+		>
+		<a routerLink="/repairs" routerLinkActive="selected" class="nav__link"
+			>Repairs</a
+		>
+		<button (click)="onExit()" class="exit">
+			<mat-icon>logout</mat-icon>
+		</button>
+	</nav>
+</header>
