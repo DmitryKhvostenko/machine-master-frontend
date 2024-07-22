@@ -21,9 +21,7 @@ import { Router } from '@angular/router'
 import { RepairService } from '../../../services/repair.service'
 import { RepairTypeService } from '../../../services/repair-type.service'
 import { IRepairType } from '../../../interfaces/repairType.model'
-import {
-	MatSnackBar,
-} from '@angular/material/snack-bar'
+import { MatSnackBar } from '@angular/material/snack-bar'
 import { ErrorComponent } from '../../error/error.component'
 
 @Component({
@@ -42,6 +40,7 @@ export class NewRepairComponent implements OnInit {
 	destroyRef = inject(DestroyRef)
 	private _snackBar = inject(MatSnackBar)
 	repairTypes = signal<IRepairType[] | undefined>(undefined)
+	isSubmitted = signal(false)
 
 	form = new FormGroup({
 		brand: new FormControl('', {
@@ -86,9 +85,10 @@ export class NewRepairComponent implements OnInit {
 	}
 
 	onSubmit() {
-		if (this.form.invalid) {
+		if (this.form.invalid || this.isSubmitted()) {
 			return
 		}
+		this.isSubmitted.set(true)
 		const formValue = this.form.value
 
 		const newMachine: INewRepair = {
@@ -111,6 +111,7 @@ export class NewRepairComponent implements OnInit {
 						duration: 5000,
 						data: { textError: err.message },
 					})
+					this.isSubmitted.set(false)
 				},
 			})
 
