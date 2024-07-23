@@ -21,6 +21,7 @@ export class MachinesComponent {
 	private _snackBar = inject(MatSnackBar)
 	isLoading = signal(true)
 	ngOnInit() {
+		document.body.classList.remove('no-scroll')
 		const subscription = this.machineService.getMachines().subscribe({
 			next: (machines) => {
 				this.defaultMachines.set(machines)

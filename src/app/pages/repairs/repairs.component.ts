@@ -34,11 +34,12 @@ export class RepairsComponent implements OnInit {
 	isLoading = signal(true)
 
 	ngOnInit() {
+		document.body.classList.remove('no-scroll')
 		const subscription = this.repairService.getPrevsOfRepairs().subscribe({
 			next: (repair) => {
 				console.log(repair)
 				this.defaultRepair.set(repair)
-				this.filteredRepair.set(repair) 
+				this.filteredRepair.set(repair)
 			},
 			complete: () => {
 				this.isLoading.set(false)

@@ -56,7 +56,7 @@ export class NewRepairComponent implements OnInit {
 		country: new FormControl('', {
 			validators: [Validators.required],
 		}),
-		repair: new FormControl<string>(' ', {
+		repair: new FormControl<string>('', {
 			validators: [Validators.required],
 		}),
 		notes: new FormControl(''),
