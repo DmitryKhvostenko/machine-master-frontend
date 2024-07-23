@@ -15,6 +15,15 @@ Welcome to the **Machine Master** frontend project! This project is a web applic
 
 You can check out the live demo of the application here: [Machine Master Demo](https://machine-master-frontend.onrender.com/)
 
+## Login Details
+
+To access the Machine Master application, use the following credentials:
+
+- **Email:** admin@machines.com
+- **Password:** admin
+
+You can log in with these credentials to manage machines, view and add repairs, and interact with the backend services.
+
 ## Installation
 
 To set up the project locally, follow these steps:
