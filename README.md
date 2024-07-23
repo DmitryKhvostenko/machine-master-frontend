@@ -1,27 +1,74 @@
-# MachineMasterFrontend
+# Machine Master Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Welcome to the **Machine Master** frontend project! This project is a web application for managing machines and repairs. It provides a user interface for interacting with the backend, allowing users to view, add, and delete repairs, as well as manage machine information.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Machine Page**: View a list of all machines.
+- **Repairs Page**: View a list of all repairs.
+- **Add Repair**: Add a new repair entry.
+- **Delete Repair**: Remove an existing repair.
+- **Login**: Secure login functionality.
+- **Backend Integration**: Communicates with a backend server to manage data.
 
-## Code scaffolding
+## Live Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You can check out the live demo of the application here: [Machine Master Demo](https://machine-master-frontend.onrender.com/)
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To set up the project locally, follow these steps:
 
-## Running unit tests
+1. **Clone the Repository**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    git clone https://github.com/DmitryKhvostenko/machine-master.git
+    ```
 
-## Running end-to-end tests
+2. **Navigate to the Project Directory**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    cd machine-master
+    ```
 
-## Further help
+3. **Install Dependencies**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ```bash
+    npm install
+    ```
+
+4. **Start the Development Server**
+
+    ```bash
+    npm start
+    ```
+
+    The application will be available at `http://localhost:4200`.
+
+## Usage
+
+- **Login**: Navigate to the login page to authenticate. After successful login, you will be redirected to the main application page.
+
+- **Machines Page**: View and manage the list of machines.
+
+- **Repairs Page**: View and manage the list of repairs.
+
+- **Add Repair**: Use the provided form to add new repairs.
+
+- **Delete Repair**: Remove repairs by selecting the delete option next to the repair entry.
+
+
+## Contributing
+
+Contributions are welcome! If you have suggestions, bug reports, or feature requests, please open an issue on the GitHub repository or submit a pull request.
+
+## Contact
+
+For any inquiries or support, please contact:
+
+- **Email**: khvostenkodmytro@gmail.com
+- **GitHub**: [Dmitry Khvostenko](https://github.com/DmitryKhvostenko)
+
+---
+
+Thank you for using **Machine Master**!
