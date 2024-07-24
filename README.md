@@ -10,6 +10,7 @@ Welcome to the **Machine Master** frontend project! This project is a web applic
 - **Delete Repair**: Remove an existing repair.
 - **Login**: Secure login functionality.
 - **Backend Integration**: Communicates with a backend server to manage data.
+- **Angular Material**: Used to create a spinner, snackbar, icons.
 
 ## Live Demo
 
