@@ -32,13 +32,13 @@ To set up the project locally, follow these steps:
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/DmitryKhvostenko/machine-master.git
+    git clone https://github.com/DmitryKhvostenko/machine-master-frontend.git
     ```
 
 2. **Navigate to the Project Directory**
 
     ```bash
-    cd machine-master
+    cd machine-master-frontend
     ```
 
 3. **Install Dependencies**
